@@ -1,0 +1,23 @@
+<div class="container">
+		<div class="row">
+				<!-- La directive @for pour boucler sur un tableau ou une class et l'afficher -->
+				@for (pokemon of pokemonList; track pokemon.id){
+						<div class="col m4 s6" (click)="goToPokemon(pokemon)" (keyup)="goToPokemon(pokemon)" tabindex>
+								<div class="card horizontal" appBorderCard>
+										<div class="card-image">
+												<img [src]="pokemon.picture"  alt="image du pokemon {{ pokemon.name }}"/>
+										</div>
+										<div class="card-stacked">
+												<div class="card-content">
+														<p>{{ pokemon.name }}</p>
+														<p><small>{{ pokemon.created | date:"dd/mm/yyyy" }}</small></p>
+														@for (type of pokemon.types; track pokemonList){
+																<span class="{{ type | pokemonTypeColor }}">{{ type }}</span>
+														}
+												</div>
+										</div>
+								</div>
+						</div>
+				}
+		</div>
+</div>
