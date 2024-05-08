@@ -10,7 +10,7 @@ import {PokemonService} from "../pokemon.service";
 export class DetailPokemonComponent implements OnInit{
 
   pokemonList!: Pokemon[];
-  pokemon: Pokemon|undefined;
+  pokemon: Pokemon | undefined;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -25,5 +25,8 @@ export class DetailPokemonComponent implements OnInit{
 
   goToPokemonList(){
     this.router.navigate(['/pokemons']).then()
+  }
+  goToEditPokemon(pokemon: Pokemon) {
+    this.router.navigate(['/edit/pokemon', pokemon.id]);
   }
 }

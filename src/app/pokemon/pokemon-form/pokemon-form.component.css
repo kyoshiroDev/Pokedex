@@ -1,0 +1,9 @@
+/* Ajoute une bordure si la saisie est valide */
+.ng-valid[required] {
+    border-left: 5px solid #42A948;
+}
+
+/* Ajoute une bordure si la saisie est invalide */
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442;
+}
