@@ -6,15 +6,15 @@ import {PokemonService} from "../pokemon.service";
 @Component({
   selector: 'app-edit-pokemon',
   template: `
-		  <h2 class="center">Editer {{ pokemon?.name }}</h2>
-		  @if (pokemon) {
-				  <p class="center">
-						  <img [src]="pokemon?.picture" alt="image du pokemon à modifier">
-				  </p>
-		  }
-		  @if (pokemon) {
-				  <app-pokemon-form [pokemon]="pokemon"></app-pokemon-form>
-		  }
+				<h2 class="center">Editer {{ pokemon?.name }}</h2>
+				@if (pokemon) {
+						<p class="center">
+								<img [src]="pokemon?.picture" alt="image du pokemon à modifier">
+						</p>
+				}
+				@if (pokemon) {
+						<app-pokemon-form [pokemon]="pokemon"></app-pokemon-form>
+				}
   `,
   styles: ``
 })
